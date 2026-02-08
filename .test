@@ -1,0 +1,40 @@
+# 기본: Dijkstra vs A*
+python run_experiments.py --outdir out --n_list 60 --p_list 0.06,0.10,0.14 --runs 20 --queries 100
+
+# 확장: + Bidirectional + ALT(landmarks)
+python run_experiments.py --outdir out --n_list 60 --p_list 0.06,0.10,0.14 --runs 20 --queries 100 --bidij --alt --k_landmarks 8
+
+
+
+# 기본(Dijkstra vs A*)
+python run_experiments.py --outdir out_paper \
+  --n_list 30,60,120,240 \
+  --p_list 0.06,0.10,0.14 \
+  --runs 10 --queries 100
+
+# 확장(ALT + BiDijkstra 포함)
+python run_experiments.py --outdir out_paper \
+  --n_list 30,60,120,240 \
+  --p_list 0.06,0.10,0.14 \
+  --runs 10 --queries 100 \
+  --bidij --alt --k_landmarks 8 \
+  --ws_beta_list 0.01,0.05,0.10,0.30 \
+  --comm_ratio_list 3,6,12
+
+# (B) 그림 생성
+python make_plots.py --results out_paper/results_basic_20260208_085258.csv \
+  --ranking out_paper/ranking_basic_20260208_085258.csv \
+  --outdir plots_paper
+
+python make_plots.py --results out_paper/results_extended_bidij_alt_20260208_085647.csv \
+  --ranking out_paper/ranking_extended_bidij_alt_20260208_085647.csv \
+  --outdir plots_paper2
+
+# (C) Selection rule
+python selection_rule.py --results out_paper/results_basic_20260208_085258.csv
+# (옵션) ML
+python selection_rule.py --results out_paper/results_basic_20260208_085258.csv --ml
+
+python selection_rule.py --results out_paper/results_extended_bidij_alt_20260208_085647.csv
+# (옵션) ML
+python selection_rule.py --results out_paper/results_extended_bidij_alt_20260208_085647.csv --ml

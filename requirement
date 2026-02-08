@@ -1,0 +1,9 @@
+
+numpy
+networkx
+matplotlib
+scikit-learn
+
+pygame
+imageio
+imageio-ffmpeg
