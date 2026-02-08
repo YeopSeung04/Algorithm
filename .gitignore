@@ -1,5 +1,7 @@
 # Images
 /out
 /test
-*.png
+# *.png
 # *.csv
+/out_paper2
+out_paper/results_extended_bidij_alt_*.csv
