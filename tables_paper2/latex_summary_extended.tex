@@ -1,0 +1,32 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{llrrrr}
+\toprule
+family & algo & median_cpu_ms & median_exp & ok_rate & n_samples \\
+\midrule
+BA & A* & 0.218 & 35.000 & 1.000 & 12000 \\
+BA & ALT & 0.196 & 7.000 & 1.000 & 12000 \\
+BA & BI_DIJKSTRA & 0.073 & 10.000 & 1.000 & 12000 \\
+BA & DIJKSTRA & 0.220 & 50.000 & 1.000 & 12000 \\
+COMM & A* & 0.179 & 39.000 & 1.000 & 36000 \\
+COMM & ALT & 0.132 & 8.000 & 1.000 & 36000 \\
+COMM & BI_DIJKSTRA & 0.064 & 16.000 & 1.000 & 36000 \\
+COMM & DIJKSTRA & 0.177 & 50.000 & 1.000 & 36000 \\
+ER & A* & 0.212 & 37.000 & 1.000 & 12000 \\
+ER & ALT & 0.156 & 7.000 & 1.000 & 12000 \\
+ER & BI_DIJKSTRA & 0.069 & 14.000 & 1.000 & 12000 \\
+ER & DIJKSTRA & 0.212 & 50.000 & 1.000 & 12000 \\
+GRID & A* & 0.123 & 41.000 & 1.000 & 12000 \\
+GRID & ALT & 0.104 & 10.000 & 1.000 & 12000 \\
+GRID & BI_DIJKSTRA & 0.081 & 31.000 & 1.000 & 12000 \\
+GRID & DIJKSTRA & 0.137 & 55.000 & 1.000 & 12000 \\
+WS & A* & 0.208 & 40.000 & 1.000 & 48000 \\
+WS & ALT & 0.154 & 9.000 & 1.000 & 48000 \\
+WS & BI_DIJKSTRA & 0.104 & 22.000 & 1.000 & 48000 \\
+WS & DIJKSTRA & 0.208 & 50.000 & 1.000 & 48000 \\
+\bottomrule
+\end{tabular}
+
+\caption{Family별 알고리즘 성능 요약(extended)}
+\label{tab:summary_extended}
+\end{table}

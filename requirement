@@ -7,3 +7,5 @@ scikit-learn
 pygame
 imageio
 imageio-ffmpeg
+pandas
+Jinja2
