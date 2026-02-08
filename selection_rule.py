@@ -134,7 +134,9 @@ def main():
             print(f"[ML] accuracy={accuracy_score(yte, yp):.3f} (features={len(feat_keys)})")
 
             # feature importance (absolute coef)
+
             coefs = np.abs(clf.coef_[0])
+
             idx = np.argsort(coefs)[::-1][:10]
             print("[ML] top features:")
             for i in idx:

@@ -1,0 +1,26 @@
+[MODE] extended
+[ALGOS] ['A*', 'ALT', 'BI_DIJKSTRA', 'DIJKSTRA']
+[CV] stratified-5fold accuracy=0.945
+
+|--- clustering <= 0.63
+|   |--- n <= 248.00
+|   |   |--- aspl_est <= 25.38
+|   |   |   |--- class: BI_DIJKSTRA
+|   |   |--- aspl_est >  25.38
+|   |   |   |--- class: BI_DIJKSTRA
+|   |--- n >  248.00
+|   |   |--- w_mean <= 4.93
+|   |   |   |--- class: ALT
+|   |   |--- w_mean >  4.93
+|   |   |   |--- class: ALT
+|--- clustering >  0.63
+|   |--- degree_cv <= 0.03
+|   |   |--- w_mean <= 4.81
+|   |   |   |--- class: BI_DIJKSTRA
+|   |   |--- w_mean >  4.81
+|   |   |   |--- class: ALT
+|   |--- degree_cv >  0.03
+|   |   |--- diam_est <= 17.50
+|   |   |   |--- class: BI_DIJKSTRA
+|   |   |--- diam_est >  17.50
+|   |   |   |--- class: ALT

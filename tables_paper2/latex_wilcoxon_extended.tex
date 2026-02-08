@@ -1,0 +1,17 @@
+\begin{table}[H]
+\centering
+\caption{Wilcoxon signed-rank test 및 Cliff's delta (A* vs DIJKSTRA)}
+\label{tab:wilcoxon_effect}
+\begin{tabular}{l r r c}
+\toprule
+Graph Family & p-value & Cliff's $\delta$ & Significant ($\alpha=0.05$) \\
+\midrule
+
+ER & 4.35e-05 & -0.031 & Yes \\
+BA & 5.754e-08 & -0.024 & Yes \\
+WS & 7.894e-16 & -0.011 & Yes \\
+GRID & 2.519e-19 & -0.114 & Yes \\
+COMM & 2.736e-06 & -0.000 & Yes \\
+\bottomrule
+\end{tabular}
+\end{table}

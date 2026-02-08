@@ -1,0 +1,26 @@
+[MODE] basic
+[ALGOS] ['A*', 'DIJKSTRA']
+[CV] stratified-5fold accuracy=0.887
+
+|--- n <= 62.00
+|   |--- avg_degree <= 7.18
+|   |   |--- n <= 33.00
+|   |   |   |--- class: DIJKSTRA
+|   |   |--- n >  33.00
+|   |   |   |--- class: DIJKSTRA
+|   |--- avg_degree >  7.18
+|   |   |--- aspl_est <= 9.47
+|   |   |   |--- class: A*
+|   |   |--- aspl_est >  9.47
+|   |   |   |--- class: DIJKSTRA
+|--- n >  62.00
+|   |--- aspl_est <= 8.63
+|   |   |--- avg_degree <= 7.16
+|   |   |   |--- class: DIJKSTRA
+|   |   |--- avg_degree >  7.16
+|   |   |   |--- class: A*
+|   |--- aspl_est >  8.63
+|   |   |--- n <= 132.00
+|   |   |   |--- class: DIJKSTRA
+|   |   |--- n >  132.00
+|   |   |   |--- class: A*
