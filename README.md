@@ -288,4 +288,6 @@ python derive_rule.py --results out_paper/results_basic.csv --outtxt tables_pape
 본 코드 또는 결과를 사용할 경우 논문을 인용해 주십시오.
 
 Graph-Structure-Aware Selection of Shortest Path Algorithms,  
+
+## 14. 논문 링크
 Algorithms (2026)
